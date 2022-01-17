@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa-ir" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>شب شعر یلدا</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+	<!-- Bootstrap Css -->
+	<link href="{% static 'css/bootstrap-rtl.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+	<!-- Icons Css -->
+	<link href="{% static 'css/icons-rtl.min.css' %}" rel="stylesheet" type="text/css" />
+	<!-- Converter form Style -->
+	{% comment %} <link href="{% static 'css/converter-form-style.css' %}" rel="stylesheet" type="text/css" /> {% endcomment %}
+	<link href="{% static 'libs/select2/css/select2.min.css' %}" rel="stylesheet" type="text/css" />
+	<!-- App Css-->
+	<link href="{% static 'css/app-rtl.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+	<!-- Custom-Converter form Style input spin-->  
+
+	<link href="{% static 'libs/toastr/build/toastr.min.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="row">
+        <div class="col-lg-2">
+        </div>
+
+        <div class="col-lg-6">
+                <div class="card">
+                        <div class="card-body">
+                                <h4 class="card-title">اسامی دانشجویان متقاضی</h4>
+
+                                <div class="table-responsive">
+                                        <table class="table table-dark mb-0">
+
+                                                <thead>
+                                                        <tr>
+                                                                <th>#</th>
+                                                                <th>نام</th>
+                                                                <th>رشته</th>
+                                                                <th>کد دانشجویی</th>
+                                                                <th>موبایل</th>
+                                                                <th>کد دعوت</th>
+                                                                <th>خوابگاهی؟</th>
+                                                                <th>زمان ثبت</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody class="font-size-11">
+                                                   {% for p in person %}  
+                                                        <tr>
+                                                                <th scope="row">{{p.id}}</th>
+                                                                <th>{{p.fullname}}</th>
+                                                                <th>{{p.course}}</th>
+                                                                <th>{{p.uniid}}</th>
+                                                                <th>{{p.mobile}}</th>
+                                                                <th>{{p.invitecode}}</th>
+                                                                <th>{% if p.bed %}اوهوم{% else %}نچ{% endif %}</th>
+                                                                <th>{{p.create_at}}</th>
+                                                        </tr>
+                                                        {% endfor %}   
+                                                </tbody>
+                                        </table>
+                                </div>
+
+                        </div>
+                </div>
+        </div>
+
+        <div class="col-lg-2">
+        </div>
+</div>
+
+<script  src="{% static 'script.js' %}"></script>
+<script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'libs/metismenu/metisMenu.min.js' %}"></script>
+<script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+<script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+<script src="{% static 'libs/select2/js/select2.min.js' %}"></script>
+<script src="{% static 'libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js' %}"></script>
+<script src="{% static 'libs/toastr/build/toastr.min.js' %}"></script>
+</body>
+</html>

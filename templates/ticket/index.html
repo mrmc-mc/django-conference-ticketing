@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa-ir" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>شب شعر یلدا</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+	<!-- Bootstrap Css -->
+	<link href="{% static 'css/bootstrap-rtl.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+	<!-- Icons Css -->
+	<link href="{% static 'css/icons-rtl.min.css' %}" rel="stylesheet" type="text/css" />
+	<!-- Converter form Style -->
+	{% comment %} <link href="{% static 'css/converter-form-style.css' %}" rel="stylesheet" type="text/css" /> {% endcomment %}
+	<link href="{% static 'libs/select2/css/select2.min.css' %}" rel="stylesheet" type="text/css" />
+	<!-- App Css-->
+	<link href="{% static 'css/app-rtl.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+	<!-- Custom-Converter form Style input spin-->  
+
+	<link href="{% static 'libs/toastr/build/toastr.min.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main class="container" style="background: url({% static 'yalda.jpg' %});">
+  <form class="form" action="" method="get">
+    <div class="form__image" style="background: linear-gradient(rgba(16, 16, 16, 0.39), rgba(16, 16, 16, 0.54)), url('{% static 'yalda.jpg' %}');"></div>
+   <img class="form__logo" src="{% static 'y1.jpg' %}" xmlns="http://www.w3.org/2000/svg" width="100%" height="840" viewBox="416.5 656.5 3044 840"/>
+
+   <div class="text-center">
+     <h3 class="p-3 bg bg-soft-primary rounded-3 text-warning">شب شعر ویژه شب یلدا</h3>
+      <h6 class="p-3 bg bg-dark rounded-3 text-warning">ظرفیت باقیمانده : {{aud}}</h6>
+     <div class="font-size-16 mt-4 pt-2">
+       <ul class="list-unstyled plan-features fw-bolder">
+         <li class="mt-5 mb-3 bg-soft-primary"><strong class="bg-soft-dark p-1 rounded-4">صاحبش کیه؟ :</strong> کانون شعر و ادب ارغوان - دانشگاه علوم پزشکی یاسوج </li>
+         <li class="mt-5 mb-3 bg-soft-primary"><strong class="bg-soft-dark p-1 rounded-4"> پاتوقش کجاس؟ :</strong>سه شنبه ۳۰ آذر ساعت ۱۹ الی ۲۲ - سالن حکیم جرجانی - سرویس دهی ساعت ۱۸:۳۵</li>
+         <li><div class="alert bg-soft-primary" role="alert">درصورت بروز مشکل به شماره 
+           <a class="btn btn-success btn-sm w-sm" target="_blank" href="https://wa.me/989367429020">واتس اپ</a> پیام ارسال نمایید.<br>
+           - نگار یوسفی دبیر کانون شعر و ادب
+           <p class="text-bold bg-soft-dark font-size-17"><a class="text-warning" target="_blank" href="https://www.instagram.com/arghavan.yums"><i class="fab fa-instagram font-size-18"></i></a></p></div></li>
+       </ul>
+     </div>
+
+
+   </div>
+    <a href="/register/" class="button text-dark text-center">
+      <div class="button__label">ثبت نام</div>
+      <div class="button__icon"></div>
+    </a>
+    <div class="">
+      <p class="text-bold bg-soft-dark font-size-17">طراحی توسط <a class="text-warning" target="_blank" href="https://www.instagram.com/mostafa_._sh">Mostafa Shahabzi <i class="fab fa-instagram font-size-18"></i></a> 😉</p>
+    </div>
+  </form>
+</main>
+<!-- partial -->
+  <script  src="{% static 'script.js' %}"></script>
+	<script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'libs/metismenu/metisMenu.min.js' %}"></script>
+	<script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+	<script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+	<script src="{% static 'libs/select2/js/select2.min.js' %}"></script>
+	<script src="{% static 'libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js' %}"></script>
+	<script src="{% static 'libs/toastr/build/toastr.min.js' %}"></script>
+</body>
+</html>

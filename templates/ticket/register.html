@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa-ir" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>شب شعر یلدا</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+	<!-- Bootstrap Css -->
+	<link href="{% static 'css/bootstrap-rtl.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+	<!-- Icons Css -->
+	<link href="{% static 'css/icons-rtl.min.css' %}" rel="stylesheet" type="text/css" />
+	<!-- Converter form Style -->
+	{% comment %} <link href="{% static 'css/converter-form-style.css' %}" rel="stylesheet" type="text/css" /> {% endcomment %}
+	<link href="{% static 'libs/select2/css/select2.min.css' %}" rel="stylesheet" type="text/css" />
+	<!-- App Css-->
+	<link href="{% static 'css/app-rtl.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+	<!-- Custom-Converter form Style input spin-->  
+
+	<link href="{% static 'libs/toastr/build/toastr.min.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main class="container" style="background: url({% static 'yalda.jpg' %});">
+  <form class="form" action="/register/" method="POST">
+    {% csrf_token %}
+    <div class="form__image" style="background: linear-gradient(rgba(16, 16, 16, 0.39), rgba(16, 16, 16, 0.54)), url('{% static 'yalda.jpg' %}');"></div>
+   <img class="form__logo" src="{% static 'y2.jpg' %}" xmlns="http://www.w3.org/2000/svg" width="100%" height="840" viewBox="416.5 656.5 3044 840"/>
+
+    <div class="input">
+      <input id="name" minlength="6" maxlength="50" name="fullname" type="text" class="input__element" placeholder=" " required/>
+      <label class="input__label" for="fullname">نام و نام خانوادگی</label>
+    </div>
+    <div class="input">
+      <input id="email" minlength="9" maxlength="11" name="uniid" type="number" class="input__element" placeholder=" " required/>
+      <label class="input__label" for="uniid">شماره دانشجویی</label>
+    </div>
+    <div class="input">
+      <input id="pasword" minlength="11" maxlength="11" name="mobile" type="number" class="input__element" placeholder=" " required/>
+      <label class="input__label" for="mobile">شماره تماس</label>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input id="pasword" minlength="4" maxlength="50" name="course" type="text" class="col input__element" placeholder=" " required/>
+        <label class="input__label" for="course">رشته</label>
+      </div>
+      <div class="col">
+        <input id="pasword" minlength="2" maxlength="4" name="entered" type="number" class="col input__element" placeholder=" " required/>
+        <label class="input__label" for="entered">سال ورود</label>
+      </div>
+    </div>
+    <div class"row">
+      <div class="col-lg-6 form-check bg-soft-primary px-2">
+        <input class="form-check-input" name="bed" type="checkbox" id="formCheck1">
+        <label class="form-check-label" for="formCheck1">
+            خوابگاه میخوابی؟
+        </label>
+      </div>
+      <div class="col-lg-6 form-check bg-soft-primary px-2">
+
+        <label class="col-sm-2 col-form-label">اسم خوابگاه؟</label>
+        <div class="col-sm-10">
+          <select name="submited" class="form-select" aria-label="Default select example">
+            <option selected=""> ... </option>
+            <option value="سمیه">سمیه</option>
+            <option value="فاطمیه">فاطمیه</option>
+            <option value="گلستان">گلستان</option>
+            <option value="امام حسن">امام حسن</option>
+            <option value="امام رضا">امام رضا</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+    <button type="submit" class="button">
+      <div class="button__label">ارسال</div>
+      <div class="button__icon"></div>
+    </button>
+    <div class="">
+      <p class="text-bold bg-soft-dark font-size-17">طراحی توسط <a class="text-warning" target="_blank" href="https://www.instagram.com/mostafa_._sh">Mostafa Shahabzi <i class="fab fa-instagram font-size-18"></i></a> 😉</p>
+    </div>
+  </form>
+</main>
+<!-- partial -->
+  <script  src="{% static 'script.js' %}"></script>
+	<script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'libs/metismenu/metisMenu.min.js' %}"></script>
+	<script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+	<script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+	<script src="{% static 'libs/select2/js/select2.min.js' %}"></script>
+	<script src="{% static 'libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js' %}"></script>
+	<script src="{% static 'libs/toastr/build/toastr.min.js' %}"></script>
+</body>
+</html>
