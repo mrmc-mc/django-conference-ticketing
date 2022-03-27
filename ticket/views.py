@@ -12,7 +12,6 @@ class Index(View):
         greeting = {}
         greeting['aud'] = capacity
         greeting['title'] = "خانه"
-        greeting['pageview'] = "رویال گیت"
         return render(request, 'ticket/index.html', greeting)
 
 
@@ -20,12 +19,10 @@ class Index(View):
 class Result(View):
 
     def get(self, request):
-        # messages.error(request, 'اطلاعات وارد شده اشتباه است')
         qs = models.Ticket.objects.all()
         greeting = {}
         greeting['person'] = qs
-        greeting['title'] = "خانه"
-        greeting['pageview'] = "رویال گیت"
+        greeting['title'] = "نتایج"
         return render(request, 'ticket/result.html', greeting)
 
 
@@ -33,19 +30,14 @@ class Result(View):
 class Register(View):
 
     def get(self, request):
-        # messages.error(request, 'اطلاعات وارد شده اشتباه است')
-        
         greeting = {}
-        greeting['title'] = "خانه"
-        greeting['pageview'] = "رویال گیت"
+        greeting['title'] = "ثبت نام"
         return render(request, 'ticket/register.html', greeting)
 
 
     def post(self, request):
-        if request.method == "POST":
             greeting = {}
             form = forms.TicketForm(request.POST)
-            # pairs = request.POST.get('send') + request.POST.get('receive')
             try:
                 if form.is_valid:
                     if models.Ticket.objects.all().count() <200:
